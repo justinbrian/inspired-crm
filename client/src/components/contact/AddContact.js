@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addContact } from "../../actions/contactActions";
 import M from "materialize-css";
-import Push from "./push.js"
+import Push from "../../actions/push.js"
 
 class AddContact extends Component {
    constructor(props) {
@@ -227,7 +227,7 @@ class AddContact extends Component {
                            <span class="helper-text">Temp</span>
                         </div>
 
-                        <div class="input-field col s3">
+                        <div class="input-field col s6 m6">
                            <i class="material-icons prefix">assignment_ind</i>
                            <input
                               id="last_reach_out_date"
@@ -239,7 +239,7 @@ class AddContact extends Component {
                            <span class="helper-text">Last Reach Out</span>
                         </div>
 
-                        <div class="input-field col s3">
+                        <div class="input-field col s6 m6">
                            <i class="material-icons prefix">assignment_ind</i>
                            <input
                               id="last_reach_out_time"

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { deleteEvent } from "../../actions/eventActions";
-import * as Push from "./push.js"
+import * as Push from "../../actions/push.js"
 
 class DeleteEvent extends Component {
   constructor(props) {

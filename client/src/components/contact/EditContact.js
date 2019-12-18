@@ -10,7 +10,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { updateContact } from "../../actions/contactActions";
 import M from "materialize-css";
-import * as Push from "./push.js" 
+import * as Push from "../../actions/push.js" 
 
 class EditContact extends Component {
    constructor(props) {
@@ -236,7 +236,7 @@ class EditContact extends Component {
                            <span class="helper-text">Temp</span>
                         </div>
 
-                        <div class="input-field col s3">
+                        <div class="input-field col s6 m6">
                            <i class="material-icons prefix">assignment_ind</i>
                            <input
                               id="last_reach_out_date"
@@ -248,7 +248,7 @@ class EditContact extends Component {
                            <span class="helper-text">Last Reach Out</span>
                         </div>
 
-                        <div class="input-field col s3">
+                        <div class="input-field col s6 m6">
                            <i class="material-icons prefix">assignment_ind</i>
                            <input
                               id="last_reach_out_time"
