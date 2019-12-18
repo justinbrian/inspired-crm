@@ -233,7 +233,7 @@ class GoalTracker extends Component {
 
                      <div class="col s12 m4">
                         <div
-                           class="card-panel center"
+                           class="card-panel center goal-tracker-col"
                            style={{ height: "100vh" }}
                         >
                            <i
@@ -291,7 +291,7 @@ class GoalTracker extends Component {
 
                      <div class="col s12 m4">
                         <div
-                           class="card-panel center"
+                           class="card-panel center goal-tracker-col"
                            style={{ height: "100vh" }}
                         >
                            <i
