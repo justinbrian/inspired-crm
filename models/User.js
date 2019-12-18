@@ -28,6 +28,24 @@ const UserSchema = new Schema({
     required: true
   },
 
+  // --------------------------------------------
+  // User adjust graph 
+  // --------------------------------------------
+
+  adjustgraph: {
+    type: Number,
+    default: 0
+  },
+  dailycomplete: {
+    type: String,
+  },
+  weeklycomplete: {
+    type: String,
+  },
+  monthlycomplete: {
+    type: String,
+  },
+
   // User goal tracking==========================
   plan: {
     // 0=custom, 1=KTLO, 2=PFG, 3=WOW
