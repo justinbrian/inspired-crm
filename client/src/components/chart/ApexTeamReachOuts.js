@@ -39,7 +39,7 @@ class ApexTeamReachOuts extends Component {
             colors:['#009912', '#95ff7d'],
          },
 
-         series: [1, 4],
+         series: [1, 0],
          labels: ["Progress"]
       };
 
@@ -59,6 +59,15 @@ class ApexTeamReachOuts extends Component {
       */
    }
 
+   componentDidUpdate(prevProps){
+      if (prevProps.tracker !== this.props.tracker || 
+          prevProps.signal !== this.props.signal){
+         this.setState({
+            series: [this.props.tracker.trogdone, this.props.tracker.trog-this.props.tracker.trogdone]
+         })
+      }
+   }
+
    render() {
       return (
          <div className="donut">
@@ -74,4 +83,15 @@ class ApexTeamReachOuts extends Component {
    }
 }
 
-export default ApexTeamReachOuts;
+ApexTeamReachOuts.propTypes = {
+   tracker: PropTypes.object,
+   signal: PropTypes.bool
+
+};
+
+const mapStateToProps = state => ({
+   tracker: state.goaltracker.tracker,
+   signal: state.goaltracker.signal
+});
+
+export default connect(mapStateToProps)(ApexTeamReachOuts);
