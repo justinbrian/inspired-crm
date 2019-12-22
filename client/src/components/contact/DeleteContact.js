@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { deleteContact } from "../../actions/contactActions";
-import * as Push from "./push.js"
+import * as Push from "../../actions/push.js"
 
 class DeleteContact extends Component {
   constructor(props) {

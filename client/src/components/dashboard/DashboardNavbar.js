@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import * as Push from "./push.js" 
+import * as Push from "../../actions/push.js" 
 
 // Modals.
 import AddContact from "../contact/AddContact.js";

@@ -37,6 +37,11 @@ import { getGoals } from "../../actions/goalActions";
 class GoalTracker extends Component {
    constructor(props) {
       super(props);
+      // this.onChangeAdjustGraph = this.onChangeAdjustGraph.bind(this);
+      // this.onSubmitDailyComplete = this.onSubmitDailyComplete.bind(this);
+      // this.onSubmitWeeklyComplete = this.onSubmitWeeklyComplete.bind(this);
+      // this.onSubmitMonthlyComplete = this.onSubmitMonthlyComplete.bind(this);
+
       this.state = {
          tracker: {},
          plan: ""
@@ -69,6 +74,7 @@ class GoalTracker extends Component {
             tracker: this.props.tracker
          });
       }
+
    }
 
    componentDidMount() {
@@ -154,7 +160,7 @@ class GoalTracker extends Component {
                   <div class="row">
                      <div class="col s12 m4">
                         <div
-                           class="card-panel center"
+                           class="card-panel center goal-tracker-col"
                            style={{ height: "100vh" }}
                         >
                            <i
@@ -227,7 +233,7 @@ class GoalTracker extends Component {
 
                      <div class="col s12 m4">
                         <div
-                           class="card-panel center"
+                           class="card-panel center goal-tracker-col"
                            style={{ height: "100vh" }}
                         >
                            <i
@@ -285,7 +291,7 @@ class GoalTracker extends Component {
 
                      <div class="col s12 m4">
                         <div
-                           class="card-panel center"
+                           class="card-panel center goal-tracker-col"
                            style={{ height: "100vh" }}
                         >
                            <i

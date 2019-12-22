@@ -74,7 +74,7 @@ class CreateEmail extends Component {
                         <button
                            type="submit"
                            className="modal-close waves-effect waves-light btn btn-primary"
-                           style={{ marginRight: "10px" }}
+                           
                         >
                            Send
                         </button>

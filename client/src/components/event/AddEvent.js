@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addEvent } from "../../actions/eventActions";
 import M from "materialize-css";
-import Push from "./push.js"
+import Push from "../../actions/push.js"
 
 class AddEvent extends Component {
    constructor(props) {
