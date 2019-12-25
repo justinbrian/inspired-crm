@@ -7,7 +7,9 @@ import {
     EDIT_CONTACT,
     UPDATE_CONTACT,
     DELETE_CONTACT,
-    SELECTALL_CONTACT } from "./types";
+    SELECTALL_CONTACT, 
+    TRACK_CONTACT,
+    UNTRACK_CONTACT} from "./types";
 
 // get all contacts
 export const getContacts = user => dispatch => {
@@ -102,6 +104,34 @@ export const selectAll = selected => dispatch => {
     })
 }
 
+// track multiple contacts
+export const trackSelected = contacts => dispatch => {
+    axios
+        .post("/api/contacts/trackmany", contacts)
+        .then(res => {
+            console.log(res);
+            delete contacts.tokenhash
+            delete contacts.email
+            // if change are made
+            // send a signal
+        })
+}
+
+// add one selected contact id to state
+export const addTrackedID = selected => dispatch => {
+    dispatch({
+        type: TRACK_CONTACT,
+        payload: selected
+    })
+}
+
+// remove the contact id from state
+export const removeTrackedID = selected => dispatch => {
+    dispatch({
+        type: UNTRACK_CONTACT,
+        payload: selected
+    })
+}
 
 
 

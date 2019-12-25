@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { editContact, deleteContact } from "../../actions/contactActions";
+import { editContact, deleteContact, addTrackedID, removeTrackedID } from "../../actions/contactActions";
 import ReactTooltip from "react-tooltip";
 
 class TableRow extends Component {
@@ -59,6 +59,11 @@ class TableRow extends Component {
    }
 
    onChangeSelect(e) {
+      if (e.target.checked){
+         this.props.addTrackedID(this.props.obj._id);
+      }else{
+         this.props.removeTrackedID(this.props.obj._id);
+      }
       this.setState({
          select: e.target.checked
       });
@@ -131,6 +136,7 @@ class TableRow extends Component {
 
 TableRow.propTypes = {
    editContact: PropTypes.func.isRequired,
+   addTrackedID: PropTypes.func.isRequired,
    edit: PropTypes.object,
    selectall: PropTypes.bool
 };
@@ -140,4 +146,4 @@ const mapStateToProps = state => ({
    selectall: state.contacts.selectall
 });
 
-export default connect(mapStateToProps, { editContact })(TableRow);
+export default connect(mapStateToProps, { editContact, addTrackedID, removeTrackedID })(TableRow);
