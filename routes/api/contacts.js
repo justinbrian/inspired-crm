@@ -211,7 +211,7 @@ router.post(
 // @desc add/remove contacts to goal tracker
 // @access Private
 // @req: email, tokenhash, [ids], trackertype, goaltracker
-// @res: {contact} OR 401
+// @res: {status} OR 401
 router.post(
    "/trackmany",
    passport.authenticate("jwt", { session: false }),
