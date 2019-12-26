@@ -29,6 +29,11 @@ class TableRow extends Component {
    componentDidUpdate(prevProps){
       if (prevProps.selectall !== this.props.selectall){
          if (this.props.selectall !== this.state.select){
+            if (this.props.selectall){
+               this.props.addTrackedID(this.props.obj._id);
+            }else{
+               this.props.removeTrackedID(this.props.obj._id);
+            }
             this.setState({
                select: this.props.selectall
             })
