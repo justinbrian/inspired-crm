@@ -292,7 +292,7 @@ class GoalSettingMenu extends Component {
                   </div>
 
                   <div class="row">
-                     <div class="col s6 offset-s3">
+                     <div class="col s12">
                         <div class="card-panel yellow accent-4 hoverable z-depth-6">
                            <div class="card-content center">
                               <h6>

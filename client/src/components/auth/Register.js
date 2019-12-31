@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+// import "./auth.css";
 
 class Register extends Component {
    constructor() {
@@ -57,35 +58,19 @@ class Register extends Component {
       const { errors } = this.state;
 
       return (
-         <div id="login-page" class="row">
-            <div class="col s12 hoverable z-depth-6 card-panel">
+         <div id="register-page" class="row">
+            <div class="col s12 card-panel">
                <div className="row">
                   <div className="col s8 offset-s2">
-                     <Link
-                        to="/"
-                        onClick={this.forceUpdate}
-                        className="btn-flat waves-effect"
-                     >
-                        <i className="material-icons left">
-                           keyboard_backspace
-                        </i>{" "}
-                        Back to home
-                     </Link>
-                     <div
-                        className="col s12"
-                        style={{ paddingLeft: "11.250px" }}
-                     >
+                     <div align="center" className="col s12">
                         <h4>
-                           <b>Register</b> below
+                           <b>Inspired</b> CRM
                         </h4>
-                        <p className="grey-text text-darken-1">
-                           Already have an account?{" "}
-                           <Link to="/login">Log in</Link>
-                        </p>
+                        <i class="material-icons">account_circle</i> User Sign Up
                      </div>
                      <form noValidate onSubmit={this.onSubmit}>
                         <div className="input-field col s12">
-                           <i class="material-icons prefix">account_circle</i>
+                          
                            <input
                               onChange={this.onChange}
                               value={this.state.fname}
@@ -100,7 +85,7 @@ class Register extends Component {
                            <span className="red-text">{errors.fname}</span>
                         </div>
                         <div className="input-field col s12">
-                           <i class="material-icons prefix">account_circle</i>
+                       
                            <input
                               onChange={this.onChange}
                               value={this.state.lname}
@@ -115,7 +100,7 @@ class Register extends Component {
                            <span className="red-text">{errors.lname}</span>
                         </div>
                         <div className="input-field col s12">
-                           <i class="material-icons prefix">email</i>
+                     
                            <input
                               onChange={this.onChange}
                               value={this.state.email}
@@ -130,7 +115,7 @@ class Register extends Component {
                            <span className="red-text">{errors.email}</span>
                         </div>
                         <div className="input-field col s12">
-                           <i class="material-icons prefix">lock_outline</i>
+              
                            <input
                               onChange={this.onChange}
                               value={this.state.password}
@@ -145,7 +130,7 @@ class Register extends Component {
                            <span className="red-text">{errors.password}</span>
                         </div>
                         <div className="input-field col s12">
-                           <i class="material-icons prefix">lock_outline</i>
+                
                            <input
                               onChange={this.onChange}
                               value={this.state.password2}
@@ -165,7 +150,7 @@ class Register extends Component {
                         >
                            <button
                               style={{
-                                 width: "300px",
+                                 width: "290px",
                                  borderRadius: "3px",
                                  letterSpacing: "1.5px",
                                  marginTop: "1rem"
@@ -176,6 +161,20 @@ class Register extends Component {
                               Sign up
                            </button>
                         </div>
+                        <p align="center" className="grey-text text-darken-1">
+                           Already have an account?{" "}
+                           <Link to="/login">Login</Link>
+                        </p>
+                        <Link
+                           to="/"
+                           onClick={this.forceUpdate}
+                           className="btn-flat waves-effect"
+                        >
+                           <i className="material-icons left">
+                              keyboard_backspace
+                           </i>{" "}
+                           Back to home
+                        </Link>
                      </form>
                   </div>
                </div>

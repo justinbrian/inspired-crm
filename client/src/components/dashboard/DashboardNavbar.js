@@ -368,7 +368,7 @@ class DashboardNavbar extends Component {
             <div
                id="deletecontact"
                class="modal"
-               style={{ width: "20%", padding: "0", left: "0", right: "0" }}
+               style={{ width: "30%", padding: "0", left: "0", right: "0" }}
             >
                <DeleteContact />
             </div>
@@ -378,7 +378,7 @@ class DashboardNavbar extends Component {
             <div
                id="notifications"
                class="modal"
-               style={{ width: "30%", padding: "0", left: "0", right: "0" }}
+               style={{ width: "80%", padding: "0", left: "0", right: "0" }}
             >
                <NotificationLog />
             </div>

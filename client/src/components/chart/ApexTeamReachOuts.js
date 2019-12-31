@@ -36,7 +36,7 @@ class ApexTeamReachOuts extends Component {
                }
             },
             labels: ["Team Reach Outs", "Team Reach Outs Pending"],
-            colors:['#009912', '#95ff7d'],
+            colors: ["#7882FF", "#0013FF"],
          },
 
          series: [1, 0],
