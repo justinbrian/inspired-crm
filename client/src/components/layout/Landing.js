@@ -21,8 +21,8 @@ class Landing extends Component {
                      </h1>
                      <div class="row center">
                         <h5 class="header col s12 light" id="shadow">
-                           Manage all your contacts, communications, activities
-                           and sales in one single place.
+                           <b>Manage all your contacts, communications, activities
+                           and sales in one single place.</b>
                         </h5>
                      </div>
                      <div class="row center">
@@ -55,7 +55,7 @@ class Landing extends Component {
                            </h2>
                            <h5 class="center">Swift</h5>
 
-                           <p class="light">
+                           <p>
                               <center>
                                  Jump start your activity. Visualize your plan
                                  for your goals and execute fast.
@@ -70,7 +70,7 @@ class Landing extends Component {
                               <i class="material-icons">group</i>
                            </h2>
                            <h5 class="center">Network</h5>
-                           <p class="light">
+                           <p>
                               <center>
                                  Start managing your contacts and leads. Reach
                                  out to more people, retain your customers, and
@@ -86,7 +86,7 @@ class Landing extends Component {
                               <i class="material-icons">settings</i>
                            </h2>
                            <h5 class="center">Intuitive</h5>
-                           <p class="light">
+                           <p>
                               <center>
                                  Developed with a modern design that is simple
                                  to understand and user friendly.
@@ -103,8 +103,8 @@ class Landing extends Component {
                   <div class="container">
                      <div class="row center">
                         <h5 class="header col s12 light" id="shadow">
-                           Reach out to prospects at the right moment and engage
-                           them across every channel.
+                           <b>Reach out to prospects at the right moment and engage
+                           them across every channel.</b>
                         </h5>
                      </div>
                   </div>
@@ -122,7 +122,7 @@ class Landing extends Component {
                            <i class="mdi-content-send brown-text"></i>
                         </h3>
                         <h4>Leads Are Important</h4>
-                        <p class="left-align light">
+                        <p class="left-align">
                            Every business, big or small, depends on leads. Leads
                            are potential customers who have shown interest in
                            your solution but who have not yet made a purchase.
@@ -140,8 +140,8 @@ class Landing extends Component {
                   <div class="container">
                      <div class="row center">
                         <h5 class="header col s12 light" id="shadow">
-                           Application that helps you sell smarter, better,
-                           faster.
+                           <b>Application that helps you sell smarter, better,
+                           faster.</b>
                         </h5>
                      </div>
                   </div>
