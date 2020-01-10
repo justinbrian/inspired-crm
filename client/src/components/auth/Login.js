@@ -4,7 +4,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-import * as Push from "./push.js";
+import Push from "../../actions/push.js";
+// import './auth.css';
+
 class Login extends Component {
    constructor() {
       super();
@@ -21,7 +23,7 @@ class Login extends Component {
          this.props.history.push("/goaltracker");
          window.location.reload(false);
 
-         Push.create("Notifications are Currently Enabled.", {
+         Push.create("Notifications are enabled.", {
             body:
                "Always remember to check your notification log for upcoming events!",
             icon: "/favicon.ico",
@@ -39,7 +41,7 @@ class Login extends Component {
          this.props.history.push("/goaltracker");
          window.location.reload(false);
 
-         Push.create("Notifications are Currently Enabled.", {
+         Push.create("Notifications are enabled.", {
             body:
                "Always remember to check your notification log for upcoming events!",
             icon: "/favicon.ico",
@@ -78,31 +80,17 @@ class Login extends Component {
 
       return (
          <div id="login-page" class="row">
-            <div class="col s12 hoverable z-depth-6 card-panel">
+            <div class="col s12 card-panel">
                <div class="row">
                   <div className="col s8 offset-s2">
-                     <Link
-                        to="/"
-                        onClick={this.forceUpdate}
-                        className="btn-flat waves-effect"
-                     >
-                        <i className="material-icons left">
-                           keyboard_backspace
-                        </i>{" "}
-                        Back to home
-                     </Link>
                      <div align="center" className="col s12">
                         <h4>
-                           <b>Login</b> below
+                           <b>Inspired</b> CRM
                         </h4>
-                        <p className="grey-text text-darken-1">
-                           Don't have an account?{" "}
-                           <Link to="/register">Register</Link>
-                        </p>
+                        <i class="material-icons">account_circle</i> User Login
                      </div>
                      <form noValidate onSubmit={this.onSubmit}>
                         <div className="input-field col s12">
-                           <i class="material-icons prefix">mail_outline</i>
                            <input
                               onChange={this.onChange}
                               value={this.state.email}
@@ -120,7 +108,6 @@ class Login extends Component {
                            </span>
                         </div>
                         <div className="input-field col s12">
-                           <i class="material-icons prefix">lock_outline</i>
                            <input
                               onChange={this.onChange}
                               value={this.state.password}
@@ -144,7 +131,7 @@ class Login extends Component {
                         >
                            <button
                               style={{
-                                 width: "300px",
+                                 width: "290px",
                                  borderRadius: "3px",
                                  letterSpacing: "1.5px",
                                  marginTop: "1rem"
@@ -155,6 +142,21 @@ class Login extends Component {
                               Login
                            </button>
                         </div>
+                        <br /><br />
+                        <p align="center" className="grey-text text-darken-1">
+                           Don't have an account?{" "}
+                           <Link to="/register">Register</Link>
+                        </p>
+                        <Link
+                           to="/"
+                           onClick={this.forceUpdate}
+                           className="btn-flat waves-effect"
+                        >
+                           <i className="material-icons left">
+                              keyboard_backspace
+                           </i>{" "}
+                           Back to home
+                        </Link>
                      </form>
                   </div>
                </div>

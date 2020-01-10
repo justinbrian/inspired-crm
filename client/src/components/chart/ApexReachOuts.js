@@ -36,7 +36,7 @@ class ApexReachOuts extends Component {
                }
             },
             labels: ["Reach Outs", "Reach Outs Pending"],
-            colors:['#ff1f1f', '#ff8080'],
+            colors:['#FF8282', '#ff1f1f'],
          },
 
          series: [1, 0],

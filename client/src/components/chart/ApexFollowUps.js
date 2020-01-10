@@ -38,7 +38,7 @@ class ApexFollowUps extends Component {
             },
             labels: ["Follow Ups", "Follow Ups Pending"],
 
-            colors: ["#00aaff", "#96dcff"]
+            colors: ["#78FF82", "#007609"]
          },
 
          series: [1, 0],
@@ -61,12 +61,17 @@ class ApexFollowUps extends Component {
       */
    }
 
-   componentDidUpdate(prevProps){
-      if (prevProps.tracker !== this.props.tracker || 
-          prevProps.signal !== this.props.signal){
+   componentDidUpdate(prevProps) {
+      if (
+         prevProps.tracker !== this.props.tracker ||
+         prevProps.signal !== this.props.signal
+      ) {
          this.setState({
-            series: [this.props.tracker.fugdone, this.props.tracker.fug-this.props.tracker.fugdone]
-         })
+            series: [
+               this.props.tracker.fugdone,
+               this.props.tracker.fug - this.props.tracker.fugdone
+            ]
+         });
       }
    }
 
@@ -88,7 +93,6 @@ class ApexFollowUps extends Component {
 ApexFollowUps.propTypes = {
    tracker: PropTypes.object,
    signal: PropTypes.bool
-
 };
 
 const mapStateToProps = state => ({
