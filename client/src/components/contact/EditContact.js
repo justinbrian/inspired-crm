@@ -28,7 +28,7 @@ class EditContact extends Component {
       this.onSubmit = this.onSubmit.bind(this);
 
       this.state = {
-         id: "",
+         _id: "",
          lname: "",
          fname: "",
          phone: "",
@@ -46,7 +46,7 @@ class EditContact extends Component {
    componentDidUpdate(prevProps) {
       if (prevProps.edit !== this.props.edit) {
          this.setState({
-            id: this.props.edit._id,
+            _id: this.props.edit._id,
             lname: this.props.edit.lname,
             fname: this.props.edit.fname,
             phone: this.props.edit.phone,
@@ -129,7 +129,7 @@ class EditContact extends Component {
       const contactData = {
          email: localStorage.getItem("userEmail"),
          tokenhash: localStorage.getItem("tokenHash"),
-         id: this.state.id,
+         _id: this.state._id,
          lname: this.state.lname,
          fname: this.state.fname,
          phone: this.state.phone,

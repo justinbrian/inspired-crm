@@ -4,7 +4,9 @@ import {
     EDIT_CONTACT,
     UPDATE_CONTACT,
     DELETE_CONTACT, 
-    SELECTALL_CONTACT} from "../actions/types";
+    SELECTALL_CONTACT,
+    TRACK_CONTACT,
+    UNTRACK_CONTACT} from "../actions/types";
 
 const initialState = {
     contacts: [],
@@ -13,7 +15,8 @@ const initialState = {
     update: {},
     delete: {},
     selectall: false,
-    selected: {}
+    selected: {},
+    selected_id:[]
 };
 
 export default function(state = initialState, action){
@@ -47,6 +50,19 @@ export default function(state = initialState, action){
             return{
                 ...state,
                 selectall: action.payload
+            }
+        case TRACK_CONTACT:
+            state.selected_id.push(action.payload);
+            return{
+                ...state
+            }
+        case UNTRACK_CONTACT:
+            var index = state.selected_id.indexOf(action.payload);
+            if (index > -1){
+                state.selected_id.splice(index, 1);
+            }
+            return{
+                ...state
             }
         default:
             return state;
