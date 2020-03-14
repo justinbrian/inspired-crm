@@ -1,6 +1,6 @@
 # Inspired CRM
 
-Full-stack MERN app with authentication using passport and JWTs.
+Full-stack MERN app with authentication using passport and JWTs. Developed with SCRUM process framework with [Flying Donut](https://www.flyingdonut.io/).
 
 This project uses the following technologies:
 
